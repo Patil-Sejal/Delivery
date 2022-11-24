@@ -33,12 +33,12 @@ export class DashboardComponent implements OnInit {
     this.CustList=result;
   });
   }
-  DeleteCustById(custId:any){
-    this.service.DeleteCustomerData(custId).subscribe(result=>{
+  DeleteCustById(trackId:any){
+    this.service.DeleteCustomerData(trackId).subscribe(result=>{
       this.CustObject=result;
    });
    }
-   UpdateCustById(custId:any){
+   UpdateCustById(trackId:any){
     console.log(this.customerForm.getRawValue());
     this.service.PutCustomerData(this.customerForm.getRawValue()).subscribe(result=>{
       this.CustObject=result;
